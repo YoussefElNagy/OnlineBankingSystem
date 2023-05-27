@@ -1,4 +1,4 @@
-package com.example.onlinebankingsystem;
+package com.payup.controllers.landing;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

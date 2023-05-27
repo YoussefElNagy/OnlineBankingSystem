@@ -1,4 +1,4 @@
-package com.example.onlinebankingsystem;
+package com.payup.controllers.landing;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +10,9 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/layout/hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Pay-UP");
         stage.setScene(scene);
         stage.show();
     }

@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.onlinebankingsystem/com.example.onlinebankingsystem.HelloApplication
+                                com.example.onlinebankingsystem/com.payup.controllers.landing.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

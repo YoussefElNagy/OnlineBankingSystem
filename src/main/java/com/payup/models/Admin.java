@@ -1,4 +1,4 @@
-package com.example.onlinebankingsystem;
+package com.payup.models;
 
 public class Admin extends User{
 

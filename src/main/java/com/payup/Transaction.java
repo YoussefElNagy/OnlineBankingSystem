@@ -1,4 +1,6 @@
-package com.example.onlinebankingsystem;
+package com.payup;
+
+import com.payup.models.Account;
 
 public class Transaction {
 
