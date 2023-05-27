@@ -1,6 +1,7 @@
 package com.payup;
 
 import com.payup.models.Account;
+import com.payup.models.Admin;
 
 public class Transaction {
 
@@ -29,7 +30,19 @@ public class Transaction {
 
     //String onlinePurchase();
 
-    //String loan();
+    String loan(Account a , double amount)
+    {
+        if(a.admin.CheckLoan(a.getLoanAmount()))
+        {
+            a.setLoanAmount(a.getLoanAmount()+amount);
+            return "Loan accepted";
+        }
+        else
+        {
+            return "Loan rejected";
+        }
+
+    }
 
 
 

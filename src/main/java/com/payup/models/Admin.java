@@ -6,4 +6,9 @@ public class Admin extends User{
         super(firstName, lastName, username, password);
     }
 
+    public boolean CheckLoan(double amount)
+    {
+        return amount<10;
+    }
+
 }
