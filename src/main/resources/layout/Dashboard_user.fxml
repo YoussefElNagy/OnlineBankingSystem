@@ -55,7 +55,7 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane fx:id="fragementContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="fragementContainer" prefHeight="200.0" prefWidth="200.0" styleClass="main" stylesheets="@../layoutstyle.css" BorderPane.alignment="CENTER">
          <children>
             <Text layoutX="359.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome " />
          </children>

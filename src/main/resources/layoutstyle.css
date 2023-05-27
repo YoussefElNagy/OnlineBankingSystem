@@ -1,9 +1,11 @@
 .parent {
     -fx-background-color: #F4EDE5;
 }
-
+.main {
+    -fx-background-color: #F4EDE5 ;
+}
 .sidebar{
-    -fx-background-color: #6e65de;
+    -fx-background-color: #F7F8F9;
 
 }
 
