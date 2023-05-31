@@ -42,7 +42,34 @@ public class Transaction {
 
     }
 
-    //String onlinePurchase();
+    public String onlinePurchase(Client c, String accountNumber, String password, double price){
+        int i=c.findAccount(accountNumber);
+        Account a=c.getAccounts().get(i);
+
+        if(a.getAccountNumber().equals(accountNumber) && a.getPassword().equals(password)) {
+           if (a.getBalance() >= price) {
+               a.setBalance(a.getBalance() - price);
+               return "Transaction Successful!";
+           }
+           else return "Transaction Failed!";
+       }
+            return "Transaction Failed!";
+    }
+
+
+    public String payBill(Client c, String accountNumber,double amount) {
+        int i=c.findAccount(accountNumber);
+        Account a=c.getAccounts().get(i);
+
+        if(a.getBalance()>=amount) {
+            a.setBalance(a.getBalance()-amount);
+            return "Bill Paid Successfully";
+        }
+
+         return "Insufficient Funds";
+
+
+    }
 
     public String loan(Client c, String accountNumber, double amount) {
         int i=c.findAccount(accountNumber);
