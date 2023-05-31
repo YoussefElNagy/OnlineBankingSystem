@@ -4,60 +4,82 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Dashboarduser">
    <left>
-      <AnchorPane prefHeight="680.0" prefWidth="165.0" styleClass="sidebar" stylesheets="@../layoutstyle.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="680.0" prefWidth="141.0" styleClass="sidebar" stylesheets="@../layoutstyle.css" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="168.0" fitWidth="187.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="147.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
                <image>
                   <Image url="@../icons/logo.png" />
                </image>
             </ImageView>
-            <StackPane layoutX="51.0" layoutY="275.0" onMouseClicked="#ontransactionclicked">
-               <children>
-                  <ImageView fitHeight="52.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/transfer.png" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" />
-               </children>
-            </StackPane>
-            <StackPane layoutX="57.0" layoutY="187.0" onMouseClicked="#Onhomeclicked">
+            <VBox layoutX="48.0" layoutY="182.0" onMouseClicked="#Onhomeclicked" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="150.0">
                <children>
                   <ImageView fitHeight="52.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/home.png" />
                      </image>
                   </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" wrappingWidth="51.01220703125">
                      <font>
                         <Font name="Arial" size="15.0" />
                      </font>
                   </Text>
                </children>
-            </StackPane>
-            <StackPane layoutX="46.0" layoutY="369.0" onMouseClicked="#onOfficierclicked">
+            </VBox>
+            <VBox layoutX="40.0" layoutY="357.0" onMouseClicked="#onOfficierclicked" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="357.0">
                <children>
                   <ImageView fitHeight="72.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/chief-executive-officer.png" />
                      </image>
                   </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Officier" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Officier" textAlignment="CENTER" wrappingWidth="68.45051956176758" />
                </children>
-            </StackPane>
+            </VBox>
+            <VBox layoutX="40.0" layoutY="236.0" onMouseClicked="#ontransactionclicked" prefHeight="88.0" prefWidth="85.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="236.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/transfer.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" textAlignment="CENTER" wrappingWidth="72.01220703125">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <ImageView fitHeight="132.0" fitWidth="138.0" layoutX="6.0" layoutY="543.0" onMouseClicked="#onprofileclickd" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0">
+               <image>
+                  <Image url="@../icons/profile.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </left>
    <center>
       <AnchorPane fx:id="fragementContainer" prefHeight="200.0" prefWidth="200.0" styleClass="main" stylesheets="@../layoutstyle.css" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="359.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome " />
+            <Text layoutX="241.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To MONEY BIT " textAlignment="CENTER" wrappingWidth="417.0065002441406">
+               <font>
+                  <Font name="Times New Roman" size="32.0" />
+               </font></Text>
+            <Text layoutX="270.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Online Banking System" textAlignment="CENTER" wrappingWidth="341.0065002441406">
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="268.0" fitWidth="264.0" layoutX="309.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/logicon.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>

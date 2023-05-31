@@ -13,10 +13,11 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/layout/Dashboard_user.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.getIcons().add(new Image(getClass().getResource("/icons/logo.png").toString()));
-        stage.setTitle("Pay-UP");
+        stage.getIcons().add(new Image(getClass().getResource("/icons/logicon.png").toString()));
+        stage.setTitle("MONEY BIT");
         stage.setScene(scene);
         stage.show();
+        stage.setResizable(false);
     }
 
     public static void main(String[] args) {

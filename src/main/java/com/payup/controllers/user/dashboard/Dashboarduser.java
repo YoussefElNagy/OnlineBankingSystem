@@ -33,5 +33,11 @@ public class Dashboarduser {
         fragementContainer.getChildren().setAll(lol);
 
     }
+    @FXML
+    void onprofileclickd(MouseEvent event) throws IOException {
+        AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/home_user.fxml"));
+        fragementContainer.getChildren().setAll(lol);
+    }
+
 
 }

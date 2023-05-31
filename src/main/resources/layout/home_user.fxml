@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="858.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Home_user">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="881.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Home_user">
    <children>
-      <Text layoutX="283.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="home " />
+      <Text layoutX="372.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" wrappingWidth="172.890625">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font></Text>
+      <VBox alignment="TOP_CENTER" layoutX="28.0" layoutY="-5.0" prefHeight="420.0" prefWidth="839.0" styleClass="pane" stylesheets="@../layoutstyle.css" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <HBox prefHeight="4.0" prefWidth="767.0">
+               <children>
+                  <Text fill="#4519f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" textAlignment="CENTER" wrappingWidth="122.98307228088379">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Text>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <Text fx:id="hellosign" layoutX="10.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello x?  , Welcome Back" wrappingWidth="514.9830722808838">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="datelabel" layoutX="160.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date here ? " textAlignment="RIGHT" textOrigin="CENTER" wrappingWidth="160.9830722808838">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <Pane>
+               <children>
+                  <AnchorPane layoutX="215.0" layoutY="23.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="254.0" prefWidth="407.0" styleClass="card" stylesheets="@../layoutstyle.css">
+                     <children>
+                        <Label layoutX="335.0" layoutY="24.0" stylesheets="@../layoutstyle.css" text="VISA" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountnumber" alignment="CENTER_RIGHT" layoutX="247.0" layoutY="177.0" prefHeight="42.0" prefWidth="100.0" text="******* 454" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountnumber1" alignment="CENTER_RIGHT" layoutX="253.0" layoutY="142.0" prefHeight="42.0" prefWidth="100.0" text="\$500.69" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="75.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#prevcardclicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/right-arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="141.0" layoutX="673.0" layoutY="79.0" onMouseClicked="#nextcardclicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/right-arrow.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="32.0" layoutY="1.0" text="My Cards">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="45.0" />
+               </VBox.margin>
+            </Pane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
