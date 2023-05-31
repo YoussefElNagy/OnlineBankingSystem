@@ -19,6 +19,7 @@ public class Account {
         this.admin=new Admin("ss","aa","123","9876"); ///Change this later
     }
 
+
     public double getBalance() {
         return balance;
     }
@@ -41,4 +42,13 @@ public class Account {
         this.loanAmount = loanAmount;
     }
     //public void displayStatement();
+
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

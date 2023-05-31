@@ -83,4 +83,6 @@ public class TransactionTest {
         assertFalse("Amount should be less than 100000", !(s.equals("Loan rejected")));
     }
 
+    @Test
+    public void testOnlinePurchase() {}
 }
