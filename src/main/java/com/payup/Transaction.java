@@ -32,7 +32,7 @@ public class Transaction {
 
     String loan(Account a , double amount)
     {
-        if(a.admin.CheckLoan(a.getLoanAmount()))
+        if(a.admin.checkLoan(a.getLoanAmount()))
         {
             a.setLoanAmount(a.getLoanAmount()+amount);
             return "Loan accepted";
