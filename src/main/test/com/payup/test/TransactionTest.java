@@ -20,8 +20,8 @@ public class TransactionTest {
     Client f = new Client("Juliana","Emad","JUUUUUUUU","9876","1240",56000,"8766","Personal");
     Client g = new Client("Moisis","George","MisoGeorge","9876","1230",42300,"6004","Personal");
     Client h = new Client("Joe","Mohamed","JoeJoeJoe","9876","9000",69000,"9120","Personal");
-    Client i = new Client("Esm","Creative","Username","9876","1200",45000,"8890","Business");
-    Client j = new Client("Dead","Man","DeadMan1","9876","4001",300000,"1092","Customer");
+    Client i = new Client("Saeed","Elhawa","HappyTheAir","9876","1200",48512,"8890","Business");
+    Client j = new Client("Snoop","Nogg","SnoopNogg69","9876","4001",300000,"1092","Customer");
 
 
     @Before
