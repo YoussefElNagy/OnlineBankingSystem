@@ -102,5 +102,29 @@ public class TransactionTest {
 
 
     @Test
-    public void testOnlinePurchase() {}
+    public void testOnlinePurchase() {
+        String s =T.onlinePurchase(j,"4001","1092",1000);
+        assertFalse("Not enough Balance", !(s.equals("Transaction Successful!")));
+    }
+
+    @Test
+    public void test2OnlinePurchase() {
+        String s =T.onlinePurchase(b,"300","1988",100000);
+        assertFalse("Not enough Balance", !(s.equals("Transaction Failed!")));
+    }
+
+
+    @Test
+    public void testPayBill(){
+        String s = T.payBill(c,"410", 20000,"9871");
+        assertTrue("Insufficient Funds",s.equals("Bill Paid Successfully"));
+
+    }
+    @Test
+    public void test2Paybill(){
+
+        String s = T.payBill(a,"120", 20000000,"9876");
+        assertFalse("Insufficient Funds",!(s.equals("Insufficient Funds")));
+
+    }
 }
