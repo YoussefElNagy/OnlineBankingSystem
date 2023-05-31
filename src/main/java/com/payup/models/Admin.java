@@ -1,6 +1,8 @@
 package com.payup.models;
 
 public class Admin extends User{
+    String email;
+    String phoneNumber;
 
     public Admin(String firstName, String lastName, String username, String password, String email, String phoneNumber) {
         super(firstName, lastName, username, password);

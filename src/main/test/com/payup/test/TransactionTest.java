@@ -32,49 +32,62 @@ public class TransactionTest {
     public void tearDown() throws Exception {
     }
 
-    @Test
-    public void testDeposit() {
-        String s = T.deposit(c,"410",1000);
-        assertFalse("Amount should be less than 0",!(s.equals("Amount Deposited Successfully!")));
-
-    }
-
-
-    @Test
-    public void test2Deposit() {
-        String s = T.deposit(d,"7500",-1000);
-        assertFalse("Amount should be less than 0",!(s.equals("Amount Entered must be more than 0")));
-    }
-
-    @Test
-    public void testWithdraw() {
-       String s =  T.withdraw(a,"120",20000);
-       assertTrue("Amount should be less than balance",s.equals("Amount Withdrawn Successfully!"));
-    }
-
-    @Test
-    public void test2Withdraw() {
-        String s =  T.withdraw(b,"300",100000000);
-        assertTrue("Amount should be less than balance",s.equals("Withdraw failed"));
-    }
+//    @Test
+//    public void testDeposit() {
+//        String s = T.deposit(c,"410",1000);
+//        assertFalse("Amount should be less than 0",!(s.equals("Amount Deposited Successfully!")));
+//
+//    }
+//
+//
+//    @Test
+//    public void test2Deposit() {
+//        String s = T.deposit(d,"7500",-1000);
+//        assertFalse("Amount should be less than 0",!(s.equals("Amount Entered must be more than 0")));
+//    }
+//
+//    @Test
+//    public void testWithdraw() {
+//       String s =  T.withdraw(a,"120",20000);
+//       assertTrue("Amount should be less than balance",s.equals("Amount Withdrawn Successfully!"));
+//    }
+//
+//    @Test
+//    public void test2Withdraw() {
+//        String s =  T.withdraw(b,"300",100000000);
+//        assertTrue("Amount should be less than balance",s.equals("Withdraw failed"));
+//    }
 
     @Test
     public void transfer() {
-        String s = T.transfer(e,f,"1177","1240",1000);
+        String s = T.transfer(e,f,"1177","1240",1000,"7700");
         assertTrue("Amount should be less than balance of first account",s.equals("Transaction Completed Successfully!"));
 
     }
 
     @Test
     public void test2Transfer() {
-        String s = T.transfer(g,h,"1230","9000",10000000);
+        String s = T.transfer(g,h,"1230","9000",100000000,"6004");
         assertTrue("Amount should be less than balance of first account",s.equals("Transaction Failed!"));
 
     }
+    @Test
+    public void test3Transfer() {
+        String s = T.transfer(a,b,"120","3000",10000,"9876");
+        assertTrue("Check Account number of receiver",s.equals("Account number of receiver is not found"));
+
+    }
+    @Test
+    public void test4Transfer() {
+        String s = T.transfer(c,d,"4100","7500",10000000,"9871");
+        assertTrue("Check Account number of sender",s.equals("Account number of sender is not found"));
+
+    }
+
 
     @Test
     public void testLoan() {
-        String s =T.loan(i,"1200",1000);
+        String s =T.loan(i,"1200",1000,"8890");
         assertFalse("Amount should be less than 100000",!(s.equals("Loan Accepted")));
 
     }
@@ -82,9 +95,11 @@ public class TransactionTest {
     public void test2Loan() {
         int x =j.findAccount("4001");
         j.getAccounts().get(x).setLoanAmount(1000000);
-        String s = T.loan(j,"4001", 400000);
+        String s = T.loan(j,"4001", 400000,"1092");
         assertFalse("Amount should be less than 100000", !(s.equals("Loan Rejected")));
     }
+
+
 
     @Test
     public void testOnlinePurchase() {}

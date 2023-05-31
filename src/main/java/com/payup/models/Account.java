@@ -16,7 +16,7 @@ public class Account {
         this.password = password;
         this.loanAmount = 0;
         this.type = type;
-        this.admin=new Admin("ss","aa","123","9876"); ///Change this later
+        this.admin=new Admin("Youssef","Mostafa","YouMos45","Mostffff64","youssefmost@Moneybit.com","011682393");
     }
 
 
