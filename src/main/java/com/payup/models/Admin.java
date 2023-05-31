@@ -8,7 +8,7 @@ public class Admin extends User{
 
     public boolean checkLoan(double amount)
     {
-        return amount<10;
+        return amount<100000;
     }
 
 }

@@ -5,12 +5,16 @@ import com.payup.models.Admin;
 
 public class Transaction {
 
-    String deposit(Account a, double amount) {
-        a.setBalance(a.getBalance()+amount);
-        return "Amount Deposited Successfully!";
+    public String deposit(Account a, double amount) {
+        if(amount>0) {
+            a.setBalance(a.getBalance() + amount);
+            return "Amount Deposited Successfully!";
+        }
+        else
+        {return "Amount Entered must be more than 0";}
     }
 
-    String withdraw(Account a, double amount) {
+    public String withdraw(Account a, double amount) {
         if(a.getBalance()>=amount) {
             a.setBalance(a.getBalance() - amount);
             return "Amount Withdrawn Successfully!";
@@ -18,7 +22,7 @@ public class Transaction {
         return "Withdraw failed";
     }
 
-    String transfer (Account a, Account b, double amount){
+    public String transfer (Account a, Account b, double amount){
         if(a.getBalance()>=amount){
             a.setBalance(a.getBalance()-amount);
             b.setBalance(b.getBalance()+amount);
@@ -30,7 +34,7 @@ public class Transaction {
 
     //String onlinePurchase();
 
-    String loan(Account a , double amount)
+    public String loan(Account a , double amount)
     {
         if(a.admin.checkLoan(a.getLoanAmount()))
         {
@@ -43,7 +47,4 @@ public class Transaction {
         }
 
     }
-
-
-
 }
