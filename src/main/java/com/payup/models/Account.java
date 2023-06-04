@@ -3,7 +3,7 @@ public class Account {
     private String accountNumber;
     private double balance;
     private String password;
-    public Admin admin;
+    public static Admin admin =new Admin("Youssef","Mostafa","YouMos45","Mostffff64","youssefmost@Moneybit.com","011682393"); ;
     private double loanAmount;
     //arraylist transactions kolaha 3shan handisplay statements wa5ed balak!!!!!
     private String type; //saving personal business masalan
@@ -16,7 +16,7 @@ public class Account {
         this.password = password;
         this.loanAmount = 0;
         this.type = type;
-        this.admin=new Admin("Youssef","Mostafa","YouMos45","Mostffff64","youssefmost@Moneybit.com","011682393");
+
     }
 
 

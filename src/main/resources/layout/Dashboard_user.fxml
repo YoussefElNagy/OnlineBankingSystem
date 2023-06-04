@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Dashboarduser">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Dashboarduser">
    <left>
       <AnchorPane prefHeight="680.0" prefWidth="141.0" styleClass="sidebar" stylesheets="@../layoutstyle.css" BorderPane.alignment="CENTER">
          <children>
@@ -24,9 +24,9 @@
                         <Image url="@../icons/home.png" />
                      </image>
                   </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" wrappingWidth="51.01220703125">
+                  <Text fx:id="Home_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" wrappingWidth="51.01220703125">
                      <font>
-                        <Font name="Arial" size="15.0" />
+                        <Font name="Times New Roman" size="15.0" />
                      </font>
                   </Text>
                </children>
@@ -38,7 +38,10 @@
                         <Image url="@../icons/chief-executive-officer.png" />
                      </image>
                   </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Officier" textAlignment="CENTER" wrappingWidth="68.45051956176758" />
+                  <Text fx:id="officier_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Officier" textAlignment="CENTER" wrappingWidth="68.45051956176758">
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font></Text>
                </children>
             </VBox>
             <VBox layoutX="40.0" layoutY="236.0" onMouseClicked="#ontransactionclicked" prefHeight="88.0" prefWidth="85.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="236.0">
@@ -48,9 +51,9 @@
                         <Image url="@../icons/transfer.png" />
                      </image>
                   </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" textAlignment="CENTER" wrappingWidth="72.01220703125">
+                  <Text fx:id="Transaction_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" textAlignment="CENTER" wrappingWidth="83.01220703125">
                      <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="Times New Roman" size="15.0" />
                      </font>
                   </Text>
                </children>

@@ -55,12 +55,4 @@ public class ConfirmTransaction {
         return idfield;
     }
 
-
-
-
-
-
-
-
-
 }

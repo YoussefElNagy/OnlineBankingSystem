@@ -2,7 +2,7 @@ package com.payup.models;
 
 public class User {
     protected String firstName, lastName;
-    protected String username;
+    protected String username , password;
 
 
     public String getFirstName() {
@@ -18,6 +18,13 @@ public class User {
     }
 
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -37,5 +44,6 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
+        this.password = password ;
     }
 }
