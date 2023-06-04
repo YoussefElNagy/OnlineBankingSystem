@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="858.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.officer_user">
+   <children>
+      <Label layoutX="208.0" layoutY="59.0" text="Relationship Manager">
+         <font>
+            <Font name="Times New Roman" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="199.0" fitWidth="225.0" layoutX="311.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/chief-executive-officer.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="172.0" layoutY="369.0" text="Mobile">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="412.0" text="Email">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="311.0" layoutY="369.0" prefHeight="20.0" prefWidth="272.0" text="011682393" />
+      <Label layoutX="311.0" layoutY="411.0" prefHeight="20.0" prefWidth="272.0" text="youssefmost@Moneybit.com" />
+      <Label layoutX="358.0" layoutY="322.0" text="Youssef Mostafa ">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

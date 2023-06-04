@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="858.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.transaction.Transactionusercontrolller">
+   <children>
+      <TabPane depthTest="DISABLE" layoutX="65.0" layoutY="42.0" prefHeight="564.0" prefWidth="741.0" styleClass="tabpane" stylesheets="@../layoutstyle.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="250.0">
+        <tabs>
+          <Tab text="Transfer to your other Accounts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="acnumur1" layoutX="33.0" layoutY="86.0" prefHeight="0.0" prefWidth="468.0" />
+                        <Label layoutX="41.0" layoutY="40.0" prefHeight="35.0" prefWidth="334.0" text="From Account number : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="169.0" prefHeight="32.0" prefWidth="292.0" text="To Account number : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="accnumur2" layoutX="41.0" layoutY="213.0" prefHeight="0.0" prefWidth="468.0" />
+                        <Label layoutX="41.0" layoutY="320.0" prefHeight="34.0" prefWidth="130.0" text="Amount  : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="amountur" layoutX="165.0" layoutY="316.0" prefHeight="23.0" prefWidth="210.0" />
+                        <Button fx:id="butur" layoutX="338.0" layoutY="426.0" mnemonicParsing="false" onMouseClicked="#transfer_to_urself" text="Transfer" />
+                        <Text layoutX="403.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Transfer to Another account">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="usrotheaccusr1" layoutX="284.0" layoutY="87.0" prefHeight="29.0" prefWidth="324.0" />
+                        <Label layoutX="41.0" layoutY="87.0" prefHeight="28.0" prefWidth="197.0" text="From Username : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="253.0" prefHeight="33.0" prefWidth="232.0" text="To Account number : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usrotheaccusr2" layoutX="246.0" layoutY="195.0" prefHeight="14.0" prefWidth="381.0" />
+                        <Label layoutX="41.0" layoutY="320.0" prefHeight="17.0" prefWidth="267.0" text="Amount  : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="amountother" layoutX="183.0" layoutY="325.0" prefHeight="23.0" prefWidth="251.0" />
+                        <Button fx:id="butother" layoutX="338.0" layoutY="426.0" mnemonicParsing="false" onMouseClicked="#transfer_to_otheracc" text="Transfer" />
+                        <Label layoutX="42.0" layoutY="197.0" prefHeight="32.0" prefWidth="183.0" text="To username : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="138.0" prefHeight="31.0" prefWidth="262.0" text="From Account number : ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usrotheaccnum1" layoutX="305.0" layoutY="139.0" prefHeight="30.0" prefWidth="322.0" />
+                        <TextField fx:id="usrotheaccnum2" layoutX="277.0" layoutY="251.0" prefHeight="32.0" prefWidth="350.0" />
+                        <Text layoutX="494.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Online Purchases ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField layoutX="33.0" layoutY="86.0" prefHeight="0.0" prefWidth="468.0" />
+                        <Label layoutX="41.0" layoutY="40.0" prefHeight="35.0" prefWidth="334.0" text="From Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="169.0" prefHeight="32.0" prefWidth="292.0" text="To Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="41.0" layoutY="213.0" prefHeight="0.0" prefWidth="468.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="33.0" layoutY="312.0" prefHeight="34.0" prefWidth="130.0" text="Amount  : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="165.0" layoutY="316.0" prefHeight="23.0" prefWidth="210.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="403.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="338.0" layoutY="420.0" mnemonicParsing="false" text="Transfer" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="accnumpurs1" layoutX="33.0" layoutY="86.0" prefHeight="0.0" prefWidth="468.0" />
+                        <Label layoutX="41.0" layoutY="40.0" prefHeight="35.0" prefWidth="334.0" text="From Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="169.0" prefHeight="32.0" prefWidth="292.0" text="To Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="accnumpurs2" layoutX="41.0" layoutY="213.0" prefHeight="0.0" prefWidth="468.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="33.0" layoutY="312.0" prefHeight="34.0" prefWidth="130.0" text="Amount  : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="amountpurs" layoutX="165.0" layoutY="316.0" prefHeight="23.0" prefWidth="210.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="403.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="butpurrch" layoutX="338.0" layoutY="420.0" mnemonicParsing="false" onMouseClicked="#purchasebtn" text="Purchase" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Pay Bills">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField layoutX="33.0" layoutY="86.0" prefHeight="0.0" prefWidth="468.0" />
+                        <Label layoutX="41.0" layoutY="40.0" prefHeight="35.0" prefWidth="334.0" text="From Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="169.0" prefHeight="32.0" prefWidth="292.0" text="To Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="41.0" layoutY="213.0" prefHeight="0.0" prefWidth="468.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="33.0" layoutY="312.0" prefHeight="34.0" prefWidth="130.0" text="Amount  : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="165.0" layoutY="316.0" prefHeight="23.0" prefWidth="210.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="403.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="338.0" layoutY="420.0" mnemonicParsing="false" text="Transfer" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="accnumbill1" layoutX="33.0" layoutY="86.0" prefHeight="0.0" prefWidth="468.0" />
+                        <Label layoutX="41.0" layoutY="40.0" prefHeight="35.0" prefWidth="334.0" text="From Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="169.0" prefHeight="32.0" prefWidth="292.0" text="To Account number : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="312.0" prefHeight="34.0" prefWidth="130.0" text="Amount  : ">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="403.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="butpaybill" layoutX="338.0" layoutY="420.0" mnemonicParsing="false" onMouseClicked="#paybillbtn" text="Pay BIll" />
+                        <Label layoutX="202.0" layoutY="310.0" prefHeight="34.0" prefWidth="130.0" text="20.00">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="combobill" layoutX="47.0" layoutY="241.0" prefHeight="22.0" prefWidth="317.0" promptText="Choose Bill" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
