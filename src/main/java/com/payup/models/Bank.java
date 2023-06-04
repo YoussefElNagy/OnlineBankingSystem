@@ -87,6 +87,16 @@ public class Bank  {
         }
     }
 
+    public  static Client getotheruser(String username){
+        for (int i = 0 ; i <clients.size() ; ++i){
+            if(Objects.equals(clients.get(i).getUsername(), username)) {
+                return clients.get(i);
+            }
+        }
+        return null ;
+    }
+
+
     public static Client getCurrentUser() {
         return currentUser;
     }
