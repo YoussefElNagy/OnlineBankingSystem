@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class AccountTest {
 
-    Account a = new Account("ABCD6969", 10000, "1234", "Saving");
+    Account a = new Account("ABCD", 10000, "1234", "Saving");
 
     @Before
     public void setUp() throws Exception {
@@ -36,17 +36,17 @@ public class AccountTest {
     }
 
     ////double 7ot 0.0f ka 3rd parameter fel ASSERT
-    @Test
-    public void getLoanAmount() {
-        assertEquals(0, a.getLoanAmount(), 0.0f);
-    }
-
-    @Test
-    public void setLoanAmount() {
-        int newLoanAmount = 5000;
-        a.setLoanAmount(newLoanAmount);
-        assertEquals(newLoanAmount, a.getLoanAmount(),0.0f);
-    }
+//    @Test
+//    public void getLoanAmount() {
+//        assertEquals(0, a.getLoanAmount(), 0.0f);
+//    }
+//
+//    @Test
+//    public void setLoanAmount() {
+//        int newLoanAmount = 5000;
+//        a.setLoanAmount(newLoanAmount);
+//        assertEquals(newLoanAmount, a.getLoanAmount(),0.0f);
+//    }
 
     @Test
     public void getType() {
@@ -54,4 +54,17 @@ public class AccountTest {
         assertEquals(type, a.getType());
     }
 
+
+    @Test
+    public void testGetAccountNumber() {
+        Account b = new Account("ABCD", 10000, "1234", "Saving");
+        assertEquals("ABCD",b.getAccountNumber());
+    }
+
+    @Test
+    public void testGetPassword() {
+        Account c = new Account("ABCD", 10000, "1234", "Saving");
+        assertEquals("1234",c.getPassword());
+
+    }
 }

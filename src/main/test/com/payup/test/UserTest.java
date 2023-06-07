@@ -39,17 +39,23 @@ public class UserTest {
 
     @Test
     public void setFirstName() {
-        String newName = "";
+        User a= new User("Bukayo","Saka","saka7","7777");
+        a.setFirstName("123");
+        assertEquals("123",a.getFirstName());
     }
 
     @Test
     public void setLastName() {
-        String newName = "";
+        User b= new User("Bukayo","Saka","saka7","7777");
+        b.setLastName("123");
+        assertEquals("123",b.getLastName());
     }
 
     @Test
     public void setUsername() {
-        String newName = "";
+        User c= new User("Bukayo","Saka","saka7","7777");
+        c.setUsername("123");
+        assertEquals("123",c.getUsername());
 
     }
 }

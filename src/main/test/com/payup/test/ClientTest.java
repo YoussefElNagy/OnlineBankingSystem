@@ -29,4 +29,20 @@ public class ClientTest {
         c.addAccount("ABCD4321", 500, "44444", "Saving");
         assertEquals(2,c.getAccountCount());
     }
+
+    @Test
+    public void testFindAccount()
+    {
+        int x = c.findAccount("ABCD1234");
+        assertEquals(0,x);
+    }
+
+    @Test
+    public void testFindAccount1()
+    {
+        int x = c.findAccount("Nognog");
+        assertEquals(-1,x);
+    }
+
+
 }

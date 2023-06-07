@@ -41,6 +41,7 @@ public void addNewAccount(String username ,String accountNumber, double balance,
 {
     Client c = Bank.getotheruser(username);
     c.addAccount(accountNumber,balance,password,type);
+
 }
 
 }

@@ -29,19 +29,19 @@ public class Account {
             this.balance = balance;
         }
     }
-    public double getLoanAmount()
-    {
-        return loanAmount;
-    }
+//    public double getLoanAmount()
+//    {
+//        return loanAmount;
+//    }
 
     public String getType() {
         return type;
     }
 
-    public void setLoanAmount(double loanAmount) {
-        this.loanAmount = loanAmount;
-    }
-    //public void displayStatement();
+//    public void setLoanAmount(double loanAmount) {
+//        this.loanAmount = loanAmount;
+//    }
+//    //public void displayStatement();
 
 
     public String getAccountNumber() {
@@ -51,4 +51,6 @@ public class Account {
     public String getPassword() {
         return password;
     }
+
+
 }
