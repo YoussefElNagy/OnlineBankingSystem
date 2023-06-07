@@ -18,8 +18,7 @@ public class HelloController {
     @FXML
     void loginadminClicked(MouseEvent event)
     {
-
-
+        SceneController.showAdminloginScene(event);
 
     }
 

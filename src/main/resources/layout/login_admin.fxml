@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="welcome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.landing.Login_admin">
+   <children>
+      <ImageView fitHeight="630.0" fitWidth="394.0" layoutX="-1.0" layoutY="-7.0" opacity="0.78" pickOnBounds="true">
+         <image>
+            <Image url="@../imgs/cropped-view-manager-making-online-payment.jpg" />
+         </image>
+      </ImageView>
+      <StackPane layoutX="451.0" layoutY="273.0" prefHeight="46.0" prefWidth="360.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="46.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="360.0">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="30.0" radius="14.5" spread="0.2" width="30.0">
+                     <color>
+                        <Color opacity="0.15267173945903778" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Rectangle>
+            <TextField fx:id="Username" prefHeight="500.0" prefWidth="360.0" promptText="Username">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="font-14px" />
+                  <String fx:value="text-medium" />
+               </styleClass>
+            </TextField>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </StackPane>
+      <StackPane layoutX="451.0" layoutY="339.0" prefHeight="46.0" prefWidth="360.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="46.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="360.0">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="30.0" radius="14.5" spread="0.2" width="30.0">
+                     <color>
+                        <Color opacity="0.15" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Rectangle>
+            <PasswordField fx:id="passwordField" prefHeight="500.0" prefWidth="360.0" promptText="Password">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="font-14px" />
+                  <String fx:value="text-medium" />
+               </styleClass>
+            </PasswordField>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </StackPane>
+      <StackPane layoutX="451.0" layoutY="402.0" onMouseClicked="#onLoginButtonClicked" prefHeight="46.0" prefWidth="360.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#0070c0" height="46.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="360.0" />
+            <Label styleClass="text-bold" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </StackPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="415.0" layoutY="175.0" prefHeight="46.0" prefWidth="431.0" styleClass="text-bold" text="Login to your account" textAlignment="CENTER" textFill="#152438">
+         <font>
+            <Font name="Montserrat Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="705.0" layoutY="473.0" onMouseClicked="#returnhome" prefHeight="14.0" prefWidth="80.0" text="Not Admin">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

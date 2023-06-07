@@ -1,16 +1,14 @@
 package com.payup.controllers.landing;
 
 
-import com.payup.NotificationPanel;
 import com.payup.controllers.SceneController;
-import com.payup.controllers.user.dashboard.Home_user;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-public class Login_user {
+public class Login_admin {
 
 
     @FXML
@@ -25,7 +23,7 @@ public class Login_user {
         System.out.println(passwordField.getText());
 
         if(MONEYBIT.Moneybit.check_user_cred(Username.getText(),passwordField.getText())){
-        SceneController.showuserdash(event);
+      //  SceneController.showuserdash(event);
         }else {
             Alert as = new Alert(Alert.AlertType.ERROR);
             as.setTitle("Invalid Data");

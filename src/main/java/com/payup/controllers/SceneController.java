@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.EventObject;
@@ -33,6 +34,21 @@ public class SceneController {
     public static void showWelcome(EventObject eventObject) {
         try {
             Parent root = FXMLLoader.load(SceneController.class.getResource("/layout/Welcome_Screen.fxml"));
+            showScene(root, eventObject);
+        }catch (IOException e) { }
+    }
+
+    public static void showAdminloginScene(EventObject eventObject) {
+        try {
+            Parent root = FXMLLoader.load(SceneController.class.getResource("/layout/login_admin.fxml"));
+            showScene(root, eventObject);
+        }catch (IOException e) { }
+
+    }
+
+    public static void showadmindash(EventObject eventObject) {
+        try {
+            Parent root = FXMLLoader.load(SceneController.class.getResource("/layout/Dashboard_admin.fxml"));
             showScene(root, eventObject);
         }catch (IOException e) { }
     }

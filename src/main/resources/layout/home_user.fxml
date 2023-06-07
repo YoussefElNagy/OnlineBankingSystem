@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,13 +14,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="881.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/19`" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Home_user">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="881.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Home_user">
    <children>
       <Text layoutX="372.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" wrappingWidth="172.890625">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font></Text>
-      <VBox alignment="TOP_CENTER" layoutX="28.0" layoutY="-5.0" prefHeight="420.0" prefWidth="839.0" styleClass="pane" stylesheets="@../layoutstyle.css" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-1.0">
+      <VBox alignment="TOP_CENTER" layoutX="28.0" layoutY="-5.0" prefHeight="368.0" prefWidth="839.0" styleClass="pane" stylesheets="@../layoutstyle.css" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-1.0">
          <children>
             <HBox prefHeight="4.0" prefWidth="767.0">
                <children>
@@ -44,9 +45,9 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
-            <Pane>
+            <Pane prefHeight="242.0" prefWidth="824.0">
                <children>
-                  <AnchorPane layoutX="215.0" layoutY="23.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="254.0" prefWidth="407.0" styleClass="card" stylesheets="@../layoutstyle.css">
+                  <AnchorPane layoutX="218.0" layoutY="5.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="233.0" prefWidth="401.0" styleClass="card" stylesheets="@../layoutstyle.css">
                      <children>
                         <Label layoutX="335.0" layoutY="24.0" stylesheets="@../layoutstyle.css" text="VISA" textFill="WHITE">
                            <font>
@@ -96,5 +97,11 @@
             </Pane>
          </children>
       </VBox>
+      <Label layoutX="56.0" layoutY="387.0" text="Transaction History">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="TransactionList" layoutX="90.0" layoutY="441.0" prefHeight="215.0" prefWidth="717.0" />
    </children>
 </AnchorPane>
