@@ -13,11 +13,15 @@ public class Bank  {
 
 
     // Users
-    private static ArrayList<User> users = new ArrayList<>();
-    private static  Client currentUser  ;
+    private static ArrayList<Admin> admins = new ArrayList<>();
+    private static  Client currentUser;
 
 
     private static ArrayList<Client> clients = new ArrayList<>();
+
+    Admin admin1 = new Admin("Youssef", "Youssef", "joe", "12345", "joe@moneybit.com", "010");
+
+
     Client a = new Client("Nagy","Ebn ElNagy","N@gy23","Nognog69","120",30000,"9876","Saving");
     Client b = new Client("Seif Eldin","Seif","$$$$$","5672","300",99999,"1988","Personal");
     Client c = new Client("Nognoga","Nognogti","Nognogto","9876","410",50505,"9871","Saving");
@@ -33,6 +37,7 @@ public class Bank  {
         g.addAccount("723",723.00,"723","Savings");
         g.addAccount("674",82323.00,"passs123d","Personal");
         Collections.addAll(clients, a,b,c,d,e,f,g,h,i,j);
+        Collections.addAll(admins, admin1);
 
         // Test
         for (int k = 0; k <clients.size() ; k++) {
@@ -57,7 +62,7 @@ public class Bank  {
 
 
     //admin
-    private ArrayList<Admin> admins = new ArrayList<>();
+//    private ArrayList<Admin> admins = new ArrayList<>();
 
 
     //accounts
@@ -77,6 +82,16 @@ public class Bank  {
             }
         }
         return false ;
+    }
+
+    public boolean check_admin_cred(String username, String password){
+        for (int i = 0 ; i <admins.size() ; ++i){
+            if(Objects.equals(admins.get(i).getUsername(), username) && Objects.equals(admins.get(i).getPassword(), password)) {
+                setcurrentUser(username);
+                return true;
+            }
+        }
+        return false;
     }
 
     public static ArrayList<Client> getClients() {

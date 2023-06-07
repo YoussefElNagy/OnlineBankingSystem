@@ -22,8 +22,9 @@ public class Login_admin {
         System.out.println(Username.getText());
         System.out.println(passwordField.getText());
 
-        if(MONEYBIT.Moneybit.check_user_cred(Username.getText(),passwordField.getText())){
-      //  SceneController.showuserdash(event);
+        if(MONEYBIT.Moneybit.check_admin_cred(Username.getText(),passwordField.getText())){
+            System.out.println("Hello");
+        SceneController.showadmindash(event);
         }else {
             Alert as = new Alert(Alert.AlertType.ERROR);
             as.setTitle("Invalid Data");
@@ -40,8 +41,8 @@ public class Login_admin {
     }
     @FXML
     public void initialize() {
-        Username.setText("MisoGeorge");
-        passwordField.setText("9876");
+        Username.setText("joe");
+        passwordField.setText("12345");
     }
 
 }

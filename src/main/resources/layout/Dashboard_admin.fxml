@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Dashboarduser">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.admin.dashboard.AdminDashboard">
    <left>
       <AnchorPane prefHeight="680.0" prefWidth="141.0" styleClass="sidebar" stylesheets="@../layoutstyle.css" BorderPane.alignment="CENTER">
          <children>
@@ -17,41 +17,27 @@
                   <Image url="@../icons/logo.png" />
                </image>
             </ImageView>
-            <VBox layoutX="48.0" layoutY="182.0" onMouseClicked="#Onhomeclicked" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="150.0">
-               <children>
-                  <ImageView fitHeight="52.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/home.png" />
-                     </image>
-                  </ImageView>
-                  <Text fx:id="Home_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" wrappingWidth="51.01220703125">
-                     <font>
-                        <Font name="Times New Roman" size="15.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="40.0" layoutY="357.0" onMouseClicked="#onOfficierclicked" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="357.0">
+            <VBox layoutX="29.0" layoutY="358.0" onMouseClicked="#onOfficierclicked" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="358.0">
                <children>
                   <ImageView fitHeight="72.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/chief-executive-officer.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="officier_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Officier" textAlignment="CENTER" wrappingWidth="68.45051956176758">
+                  <Text fx:id="officier_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Card Account" textAlignment="CENTER" wrappingWidth="68.45051956176758">
                      <font>
                         <Font name="Times New Roman" size="15.0" />
                      </font></Text>
                </children>
             </VBox>
-            <VBox layoutX="40.0" layoutY="236.0" onMouseClicked="#ontransactionclicked" prefHeight="88.0" prefWidth="85.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="236.0">
+            <VBox layoutX="29.0" layoutY="237.0" onMouseClicked="#onNewClientClicked" prefHeight="88.0" prefWidth="85.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="237.0">
                <children>
                   <ImageView fitHeight="65.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/transfer.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="Transaction_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" textAlignment="CENTER" wrappingWidth="83.01220703125">
+                  <Text fx:id="Transaction_label" strokeType="OUTSIDE" strokeWidth="0.0" text="New Client" textAlignment="CENTER" wrappingWidth="83.01220703125">
                      <font>
                         <Font name="Times New Roman" size="15.0" />
                      </font>
