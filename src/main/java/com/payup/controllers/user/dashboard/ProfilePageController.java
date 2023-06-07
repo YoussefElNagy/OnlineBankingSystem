@@ -135,9 +135,15 @@ public class ProfilePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        first_name.setText(Bank.getCurrentUser().getFirstName());
-        last_name.setText(Bank.getCurrentUser().getLastName());
-        client_password.setText(Bank.getCurrentUser().getPassword());
+        try{
+            first_name.setText(Bank.getCurrentUser().getFirstName());
+            last_name.setText(Bank.getCurrentUser().getLastName());
+            client_password.setText(Bank.getCurrentUser().getPassword());
+        }catch(Exception e){
+            first_name.setText(Bank.getCurrentAdmin().getFirstName());
+            last_name.setText(Bank.getCurrentAdmin().getLastName());
+            client_password.setText(Bank.getCurrentAdmin().getPassword());
+        }
 
 
         System.out.println("Hello");

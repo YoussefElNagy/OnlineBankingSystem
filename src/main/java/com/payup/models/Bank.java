@@ -16,6 +16,8 @@ public class Bank  {
     private static ArrayList<Admin> admins = new ArrayList<>();
     private static  Client currentUser;
 
+    public static Admin currentAdmin;
+
 
     private static ArrayList<Client> clients = new ArrayList<>();
 
@@ -87,7 +89,7 @@ public class Bank  {
     public boolean check_admin_cred(String username, String password){
         for (int i = 0 ; i <admins.size() ; ++i){
             if(Objects.equals(admins.get(i).getUsername(), username) && Objects.equals(admins.get(i).getPassword(), password)) {
-                setcurrentUser(username);
+                setCurrentAdmin(username);
                 return true;
             }
         }
@@ -106,6 +108,14 @@ public class Bank  {
         }
     }
 
+    private void setCurrentAdmin(String username) {
+        for (int i = 0 ; i <admins.size() ; ++i){
+            if(Objects.equals(admins.get(i).getUsername(), username)) {
+                currentAdmin = admins.get(i);
+            }
+        }
+    }
+
     public  static Client getotheruser(String username){
         for (int i = 0 ; i <clients.size() ; ++i){
             if(Objects.equals(clients.get(i).getUsername(), username)) {
@@ -119,5 +129,7 @@ public class Bank  {
     public static Client getCurrentUser() {
         return currentUser;
     }
+
+    public static Admin getCurrentAdmin(){return currentAdmin;}
 
 }

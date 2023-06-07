@@ -17,14 +17,14 @@
                   <Image url="@../icons/logo.png" />
                </image>
             </ImageView>
-            <VBox layoutX="29.0" layoutY="358.0" onMouseClicked="#onOfficierclicked" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="358.0">
+            <VBox layoutX="29.0" layoutY="358.0" onMouseClicked="#onNewCardClicked" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="358.0">
                <children>
                   <ImageView fitHeight="72.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/chief-executive-officer.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="officier_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Card Account" textAlignment="CENTER" wrappingWidth="68.45051956176758">
+                  <Text fx:id="newCardLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Card Account" textAlignment="CENTER" wrappingWidth="68.45051956176758">
                      <font>
                         <Font name="Times New Roman" size="15.0" />
                      </font></Text>
@@ -37,7 +37,7 @@
                         <Image url="@../icons/transfer.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="Transaction_label" strokeType="OUTSIDE" strokeWidth="0.0" text="New Client" textAlignment="CENTER" wrappingWidth="83.01220703125">
+                  <Text fx:id="newClientLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="New Client" textAlignment="CENTER" wrappingWidth="83.01220703125">
                      <font>
                         <Font name="Times New Roman" size="15.0" />
                      </font>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="fragementContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="881.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="main" stylesheets="@../layoutstyle.css">
+         <children>
+            <Text layoutX="241.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To MONEY BIT " textAlignment="CENTER" wrappingWidth="417.0065002441406">
+               <font>
+                  <Font name="Times New Roman" size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="270.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Online Banking System" textAlignment="CENTER" wrappingWidth="341.0065002441406">
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="268.0" fitWidth="264.0" layoutX="309.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/logicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

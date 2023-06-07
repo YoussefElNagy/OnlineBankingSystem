@@ -31,7 +31,7 @@ public class Admin extends User{
 //        return amount<100000;
 //    }
 
-public void addNewClient(String firstName, String lastName, String username, String password, String accountNumber, double balance, String accPassword, String type)
+public static void addNewClient(String firstName, String lastName, String username, String password, String accountNumber, double balance, String accPassword, String type)
 {
     Client c = new Client(firstName, lastName, username,password,accountNumber,balance,accPassword, type);
     Bank.getClients().add(c);
