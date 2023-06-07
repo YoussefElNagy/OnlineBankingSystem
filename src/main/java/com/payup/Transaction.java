@@ -44,7 +44,7 @@ public class Transaction {
                 b.setBalance(b.getBalance() + amount);
                 c1.getStatments().add("Transfered money to acount number " + accountNumber2 + " with amount" + amount);
                 return "Transaction Completed Successfully!";
-            }
+            }else return "Insufficient Funds";
             }
             return "Transaction Failed!";
         }
@@ -61,7 +61,7 @@ public class Transaction {
            if (a.getBalance() >= price) {
                a.setBalance(a.getBalance() - price);
                c.getStatments().add("Made online purchased and paid " + price);
-               return "Transaction Successful!";
+               return "Transaction Completed Successfully!";
            }
            else return "Transaction Failed!";
        }
@@ -73,17 +73,24 @@ public class Transaction {
     public String payBill(Client c, String accountNumber,double amount , String password) {
         int i=c.findAccount(accountNumber);
         if(i==-1)
-        {return "Account number is not found";}
+        {
+            return "Account number is not found";
+        }
+
         Account a=c.getAccounts().get(i);
         if(a.getAccountNumber().equals(accountNumber) && a.getPassword().equals(password)) {
 
-            if (a.getBalance() >= amount) {
+             if (a.getBalance() >= amount) {
                 a.setBalance(a.getBalance() - amount);
                 c.getStatments().add("Paid bill with amount " + amount);
                 return "Bill Paid Successfully";
-            }
-        }
-         return "Insufficient Funds";
+            }else {
+
+                 return "Insufficient Funds";
+             }
+        }else {
+            return "Transaction Failed!";}
+
 
 
     }

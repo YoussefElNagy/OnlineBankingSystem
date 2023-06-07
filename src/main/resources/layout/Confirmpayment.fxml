@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
@@ -11,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="266.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.transaction.ConfirmTransaction">
+<AnchorPane prefHeight="266.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.transaction.ConfirmTransaction">
    <children>
       <StackPane layoutX="100.0" layoutY="97.0">
          <children>
@@ -24,15 +23,7 @@
                   </DropShadow>
                </effect>
             </Rectangle>
-            <TextField fx:id="idfield" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="200.0" promptText="Account  Password">
-               <font>
-                  <Font name="Montserrat Medium" size="14.0" />
-               </font>
-               <styleClass>
-                  <String fx:value="text-medium" />
-                  <String fx:value="font-14px" />
-               </styleClass>
-            </TextField>
+            <PasswordField fx:id="idfield" prefHeight="42.0" prefWidth="200.0" promptText="Account password" />
          </children>
          <cursor>
             <Cursor fx:constant="HAND" />

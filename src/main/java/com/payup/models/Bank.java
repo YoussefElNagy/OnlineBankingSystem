@@ -30,7 +30,7 @@ public class Bank  {
     Client j = new Client("Snoop","Nogg","SnoopNogg69","9876","4001",300000,"1092","Customer");
 
     public void setdatabase_Clients(){
-        g.addAccount("723",723.00,"passsword","Savings");
+        g.addAccount("723",723.00,"723","Savings");
         g.addAccount("674",82323.00,"passs123d","Personal");
         Collections.addAll(clients, a,b,c,d,e,f,g,h,i,j);
 

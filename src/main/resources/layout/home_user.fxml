@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="881.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Home_user">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="881.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/19`" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.user.dashboard.Home_user">
    <children>
       <Text layoutX="372.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" wrappingWidth="172.890625">
          <font>

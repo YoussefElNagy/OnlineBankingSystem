@@ -1,6 +1,7 @@
 package com.payup.controllers.landing;
 
 
+import com.payup.NotificationPanel;
 import com.payup.controllers.SceneController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

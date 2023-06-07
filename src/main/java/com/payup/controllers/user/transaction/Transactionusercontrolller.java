@@ -1,5 +1,6 @@
 package com.payup.controllers.user.transaction;
 
+import com.payup.NotificationPanel;
 import com.payup.models.Account;
 import com.payup.models.Bank;
 import com.payup.models.Client;
@@ -157,6 +158,8 @@ public class Transactionusercontrolller {
         } else {
             double amount = parseDouble(amount_paybill.getText());
             opendialog(accnumbill1.getText().trim(),"", amount, 2);
+
+
         }
     }
 

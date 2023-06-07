@@ -1,7 +1,7 @@
 package com.payup.controllers.user.transaction;
 
 
-
+import com.payup.NotificationPanel;
 import com.payup.Transaction;
 import com.payup.models.Account;
 import com.payup.models.Bank;
@@ -10,7 +10,9 @@ import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.controlsfx.control.Notifications;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 public class ConfirmTransaction {
@@ -27,12 +29,14 @@ public class ConfirmTransaction {
     private TextField idfield;
 
     @FXML
-    void onConfirmclicked(MouseEvent event) {
+    void onConfirmclicked(MouseEvent event)  {
+        String out ;
 
+       
                 int x = Bank.getCurrentUser().findAccount(accnum1);
                 System.out.println(Bank.getCurrentUser().getAccounts().get(x).getBalance());
                 System.out.println(Bank.getCurrentUser().getAccounts().get(x).getPassword());
-                if(idfield.getText().trim().equals(Bank.getCurrentUser().getAccounts().get(x).getPassword())){
+
                     Transaction newtranscaction = new Transaction();
                     switch (mode){
                         /*
@@ -43,17 +47,20 @@ public class ConfirmTransaction {
                          * */
 
                         case 1 :
-                            newtranscaction.transfer(Bank.getCurrentUser(),Bank.getCurrentUser(),accnum1,accnum2,amount,idfield.getText().trim());
-                            System.out.println(Bank.getCurrentUser().getAccounts().get(x).getBalance());
+                            out = newtranscaction.transfer(Bank.getCurrentUser(),Bank.getCurrentUser(),accnum1,accnum2,amount,idfield.getText().trim());
+                            //System.out.println(Bank.getCurrentUser().getAccounts().get(x).getBalance());
+                            NotificationPanel.setText(out);
                             break;
                         case 2 :
-                            newtranscaction.payBill(Bank.getCurrentUser(),accnum1,amount,idfield.getText().trim());
+                          out = newtranscaction.payBill(Bank.getCurrentUser(),accnum1,amount,idfield.getText().trim());
+                           NotificationPanel.setText(out);
                             break;
                         case 3 :
                             break;
                         case 4 :
-                            newtranscaction.transfer(Bank.getCurrentUser(),Bank.getotheruser(other_usr),accnum1,accnum2,amount,idfield.getText().trim());
-                            System.out.println(Bank.getotheruser(other_usr).getAccounts().get( Bank.getotheruser(other_usr).findAccount(accnum2)).getBalance());
+                            out = newtranscaction.transfer(Bank.getCurrentUser(),Bank.getotheruser(other_usr),accnum1,accnum2,amount,idfield.getText().trim());
+                            NotificationPanel.setText(out);
+                           // System.out.println(Bank.getotheruser(other_usr).getAccounts().get( Bank.getotheruser(other_usr).findAccount(accnum2)).getBalance());
                             break;
 
 
@@ -63,11 +70,8 @@ public class ConfirmTransaction {
                     Stage stage  = (Stage) source.getScene().getWindow();
                     stage.close();
 
-        }
-
-
-
-        }
+        NotificationPanel.setNotifications(NotificationPanel.getText());
+    }
 
 
 

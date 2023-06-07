@@ -1,6 +1,7 @@
 module com.example.onlinebankingsystem {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.controlsfx.controls;
 
 
     opens com.payup to javafx.fxml;
