@@ -15,4 +15,8 @@ module com.example.onlinebankingsystem {
     exports com.payup.controllers.user.transaction;
     opens com.payup.controllers.user.transaction to javafx.fxml;
 
+    exports com.payup.controllers.admin.dashboard;
+    opens com.payup.controllers.admin.dashboard to  javafx.fxml;
+
+
 }
