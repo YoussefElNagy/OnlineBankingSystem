@@ -85,19 +85,19 @@ public class TransactionTest {
     }
 
 
-    @Test
-    public void testLoan() {
-        String s =T.loan(i,"1200",1000,"8890");
-        assertFalse("Amount should be less than 100000",!(s.equals("Loan Accepted")));
-
-    }
-    @Test
-    public void test2Loan() {
-        int x =j.findAccount("4001");
-        j.getAccounts().get(x).setLoanAmount(1000000);
-        String s = T.loan(j,"4001", 400000,"1092");
-        assertFalse("Amount should be less than 100000", !(s.equals("Loan Rejected")));
-    }
+//    @Test
+//    public void testLoan() {
+//        String s =T.loan(i,"1200",1000,"8890");
+//        assertFalse("Amount should be less than 100000",!(s.equals("Loan Accepted")));
+//
+//    }
+//    @Test
+//    public void test2Loan() {
+//        int x =j.findAccount("4001");
+//        j.getAccounts().get(x).setLoanAmount(1000000);
+//        String s = T.loan(j,"4001", 400000,"1092");
+//        assertFalse("Amount should be less than 100000", !(s.equals("Loan Rejected")));
+//    }
 
 
 

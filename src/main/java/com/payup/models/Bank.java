@@ -79,6 +79,10 @@ public class Bank  {
         return false ;
     }
 
+    public static ArrayList<Client> getClients() {
+        return clients;
+    }
+
     private void setcurrentUser(String username) {
         for (int i = 0 ; i <clients.size() ; ++i){
             if(Objects.equals(clients.get(i).getUsername(), username)) {

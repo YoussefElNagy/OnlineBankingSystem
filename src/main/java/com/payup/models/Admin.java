@@ -26,9 +26,21 @@ public class Admin extends User{
         this.phoneNumber = phoneNumber;
     }
 
-    public boolean checkLoan(double amount)
-    {
-        return amount<100000;
-    }
+//    public boolean checkLoan(double amount)
+//    {
+//        return amount<100000;
+//    }
+
+public void addNewClient(String firstName, String lastName, String username, String password, String accountNumber, double balance, String accPassword, String type)
+{
+    Client c = new Client(firstName, lastName, username,password,accountNumber,balance,accPassword, type);
+    Bank.getClients().add(c);
+}
+
+public void addNewAccount(String username ,String accountNumber, double balance, String password, String type)
+{
+    Client c = Bank.getotheruser(username);
+    c.addAccount(accountNumber,balance,password,type);
+}
 
 }

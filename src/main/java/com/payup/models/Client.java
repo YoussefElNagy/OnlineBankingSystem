@@ -6,6 +6,8 @@ public class Client extends User {
     public int accountCount = 0;
     ArrayList<Account> accounts = new ArrayList<Account>();
 
+    private ArrayList<String> statments = new ArrayList<>();
+
     public Client(String firstName, String lastName, String username, String password, String accountNumber, double balance, String accPassword, String type) {
         super(firstName, lastName, username, password);
         Account account = new Account(accountNumber, balance, accPassword, type);
@@ -19,9 +21,13 @@ public class Client extends User {
         Account a = new Account(accountNumber, balance, password, type);
         accounts.add(a);
         accountCount++;
+        statments.add("Made new account with account number " + accountNumber );
 
     }
 
+    public ArrayList<String> getStatments() {
+        return statments;
+    }
 
     public int getAccountCount() {
         return accountCount;
