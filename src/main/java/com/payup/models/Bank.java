@@ -19,7 +19,7 @@ public class Bank  {
 
     private static ArrayList<Client> clients = new ArrayList<>();
     Client a = new Client("Nagy","Ebn ElNagy","N@gy23","Nognog69","120",30000,"9876","Saving");
-    Client b = new Client("Seif","Seif","$$$$$","5672","300",99999,"1988","Personal");
+    Client b = new Client("Seif Eldin","Seif","$$$$$","5672","300",99999,"1988","Personal");
     Client c = new Client("Nognoga","Nognogti","Nognogto","9876","410",50505,"9871","Saving");
     Client d = new Client("Lil","Gaded","LilGaded","9876","7500",696969,"8820","Business");
     Client e = new Client("Boody","Essam","Boody3essam","9876","1177",39000,"7700","Saving");
