@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fragementContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="881.0" styleClass="main" stylesheets="@../layoutstyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.admin.dashboard.AdminDashboard">
+   <children>
+      <Button layoutX="390.0" layoutY="557.0" mnemonicParsing="false" onAction="#addNewCard" text="Add New Card" />
+      <Label layoutX="309.0" layoutY="77.0" text="Add a new Card">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

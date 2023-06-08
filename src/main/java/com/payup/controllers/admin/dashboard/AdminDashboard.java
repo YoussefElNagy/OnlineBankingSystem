@@ -54,7 +54,7 @@ public class AdminDashboard {
 
 
     @FXML
-    void addNewClient(ActionEvent event){
+    void addNewClient(ActionEvent event) throws IOException {
         String fname = first_name.getText();
         String lname = last_name.getText();
         String uname = username.getText();
@@ -108,10 +108,10 @@ public class AdminDashboard {
                         a.setTitle("Success");
                         a.setContentText("Client Added Successfully");
                         a.showAndWait();
-//                        AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/home_admin.fxml"));
-//                        fragementContainer.getChildren().setAll(lol);
-                        newClientLabel.setFont(Font.font(null,FontWeight.BOLD,15));
-                        newCardLabel.setFont(Font.font(null,FontWeight.NORMAL,15));
+                        AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/home_admin.fxml"));
+                        fragementContainer.getChildren().setAll(lol);
+//                        Null Pointer Exception??
+//                        newClientLabel.setFont(Font.font(null,FontWeight.NORMAL,15));
                     }
                 }
             }catch(NumberFormatException e){
@@ -129,8 +129,8 @@ public class AdminDashboard {
 
     @FXML
     void onNewClientClicked(MouseEvent event) throws IOException {
-        AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/add_client.fxml"));
-        fragementContainer.getChildren().setAll(lol);
+        AnchorPane newClientPane = FXMLLoader.load(getClass().getResource("/layout/add_client.fxml"));
+        fragementContainer.getChildren().setAll(newClientPane);
         newClientLabel.setFont(Font.font(null,FontWeight.BOLD,15));
         newCardLabel.setFont(Font.font(null,FontWeight.NORMAL,15));
 
@@ -138,9 +138,19 @@ public class AdminDashboard {
 
 
     @FXML
-    void onNewCardClicked(){
+    void onNewCardClicked() throws IOException {
+        AnchorPane newCardPane = FXMLLoader.load(getClass().getResource("/layout/add_card.fxml"));
+        fragementContainer.getChildren().setAll(newCardPane);
+        newClientLabel.setFont(Font.font(null,FontWeight.NORMAL,15));
+        newCardLabel.setFont(Font.font(null,FontWeight.BOLD,15));
 
     }
+
+    @FXML
+    void addNewCard(ActionEvent event){
+
+    }
+
     @FXML
     void onprofileclickd(MouseEvent event) throws IOException {
         AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/profile_page.fxml"));
