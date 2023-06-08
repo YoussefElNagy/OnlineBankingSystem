@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.admin.dashboard.AdminDashboard">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.payup.controllers.admin.dashboard.AdminDashboard">
    <left>
       <AnchorPane prefHeight="680.0" prefWidth="141.0" styleClass="sidebar" stylesheets="@../layoutstyle.css" BorderPane.alignment="CENTER">
          <children>
@@ -17,11 +17,11 @@
                   <Image url="@../icons/logo.png" />
                </image>
             </ImageView>
-            <VBox layoutX="29.0" layoutY="358.0" onMouseClicked="#onNewCardClicked" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="358.0">
+            <VBox layoutX="38.0" layoutY="357.0" onMouseClicked="#onNewCardClicked" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="357.0">
                <children>
                   <ImageView fitHeight="72.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/chief-executive-officer.png" />
+                        <Image url="@../icons/add-card-58.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="newCardLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Card Account" textAlignment="CENTER" wrappingWidth="68.45051956176758">
@@ -32,9 +32,9 @@
             </VBox>
             <VBox layoutX="29.0" layoutY="237.0" onMouseClicked="#onNewClientClicked" prefHeight="88.0" prefWidth="85.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="237.0">
                <children>
-                  <ImageView fitHeight="65.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="86.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/transfer.png" />
+                        <Image url="@../icons/add-user.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="newClientLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="New Client" textAlignment="CENTER" wrappingWidth="83.01220703125">

@@ -42,25 +42,11 @@ public class Bank  {
         Collections.addAll(clients, a,b,c,d,e,f,g,h,i,j);
         Collections.addAll(admins, admin1);
 
-        // Test
-        for (int k = 0; k <clients.size() ; k++) {
-            System.out.println(clients.get(k).firstName);
-        }
+
     }
 
 
-//    public void setdatabase_accounts(){
-//        Collections.addAll(clients, a,b,c,d,e,f,g,h,i,j);
-//        // Test
-//        for (int k = 0; k <clients.size() ; k++) {
-//            System.out.println(clients.get(k).firstName);
-//        }
-//    }
 
-
-
-
-    //    public User(String firstName, String lastName, String username, String password) {
 
 
 
