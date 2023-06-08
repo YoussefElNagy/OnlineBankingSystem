@@ -38,11 +38,15 @@ public class Transaction {
                 return "Account number of receiver is not found";
             }
             Account b = c2.getAccounts().get(j);
+            if(amount<=0)
+                return "Transaction Failed!";
+
 
             if (a.getBalance() >= amount) {
                 a.setBalance(a.getBalance() - amount);
                 b.setBalance(b.getBalance() + amount);
-                c1.getStatments().add("Transfered money to acount number " + accountNumber2 + " with amount" + amount);
+                c1.getStatments().add("Transferred money to account number " + accountNumber2 + " with amount " + amount + "$.");
+                c2.getStatments().add("Received " + amount + "$ from account number " + accountNumber1+ ".");
                 return "Transaction Completed Successfully!";
             }else return "Insufficient Funds";
             }
@@ -60,7 +64,7 @@ public class Transaction {
             if(a.getAccountNumber().equals(accountNumber) && a.getPassword().equals(password)) {
            if (a.getBalance() >= price) {
                a.setBalance(a.getBalance() - price);
-               c.getStatments().add("Made online purchased and paid " + price);
+               c.getStatments().add("Made online purchase for " + price + "$.");
                return "Transaction Completed Successfully!";
            }
            else return "Transaction Failed!";

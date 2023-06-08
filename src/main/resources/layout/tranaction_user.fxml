@@ -132,33 +132,23 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="accnumpurs1" layoutX="33.0" layoutY="86.0" prefHeight="0.0" prefWidth="468.0" />
-                        <Label layoutX="41.0" layoutY="40.0" prefHeight="35.0" prefWidth="334.0" text="From Account number : ">
+                        <TextField fx:id="accnumpurs1" layoutX="33.0" layoutY="201.0" prefHeight="0.0" prefWidth="468.0" />
+                        <Label layoutX="33.0" layoutY="136.0" prefHeight="35.0" prefWidth="334.0" text="From Account number : ">
                            <font>
                               <Font name="Times New Roman" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="41.0" layoutY="169.0" prefHeight="32.0" prefWidth="292.0" text="To Account number : ">
+                        <Label layoutX="33.0" layoutY="273.0" prefHeight="34.0" prefWidth="130.0" text="Amount  : ">
                            <font>
                               <Font name="Times New Roman" size="24.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="accnumpurs2" layoutX="41.0" layoutY="213.0" prefHeight="0.0" prefWidth="468.0">
+                        <TextField fx:id="amountpurs" layoutX="33.0" layoutY="327.0" prefHeight="23.0" prefWidth="210.0">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </TextField>
-                        <Label layoutX="33.0" layoutY="312.0" prefHeight="34.0" prefWidth="130.0" text="Amount  : ">
-                           <font>
-                              <Font name="Times New Roman" size="24.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="amountpurs" layoutX="165.0" layoutY="316.0" prefHeight="23.0" prefWidth="210.0">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </TextField>
-                        <Text layoutX="403.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                        <Text layoutX="250.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
                            <font>
                               <Font size="31.0" />
                            </font>

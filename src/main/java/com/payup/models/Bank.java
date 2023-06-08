@@ -37,6 +37,7 @@ public class Bank  {
 
     public void setdatabase_Clients(){
         g.addAccount("723",723.00,"723","Savings");
+        a.addAccount("69",6969.69,"69","Personal");
         g.addAccount("674",82323.00,"passs123d","Personal");
         Collections.addAll(clients, a,b,c,d,e,f,g,h,i,j);
         Collections.addAll(admins, admin1);
