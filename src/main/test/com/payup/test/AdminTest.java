@@ -15,7 +15,6 @@ public class AdminTest {
     public static void ClassSetup() throws Exception {
         System.out.println("Start All");
         admin5= new Admin("Youssef","Mostafa","YouMos45","Mostffff64","youssefmost@Moneybit.com","011682393");
-
         admin5.addNewClient("Youssef","Mostafa","YouMos45","Mostffff64","123",200,"123","saving");
     }
 

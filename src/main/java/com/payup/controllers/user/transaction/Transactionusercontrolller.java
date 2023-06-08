@@ -165,6 +165,19 @@ public class Transactionusercontrolller {
 
     @FXML
     void purchasebtn(MouseEvent event) {
+        if (Objects.equals(accnumpurs1.getText().trim(), "" )|| (accnumpurs1.getText().isEmpty())
+                || (Bank.getCurrentUser().findAccount(accnumpurs1.getText().trim()) == -1 )
+                ||Objects.equals(amountpurs.getText().trim(), "")) {
+            Alert as = new Alert(Alert.AlertType.ERROR);
+            as.setTitle("Invalid Data");
+            as.setContentText("Please Try again ");
+            as.showAndWait();
+        } else {
+            double amount = parseDouble(amountpurs.getText());
+            opendialog(accnumpurs1.getText().trim(),"", amount, 3);
+
+
+        }
 
     }
 

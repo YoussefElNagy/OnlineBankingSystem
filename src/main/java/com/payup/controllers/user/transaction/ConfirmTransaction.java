@@ -56,6 +56,8 @@ public class ConfirmTransaction {
                            NotificationPanel.setText(out);
                             break;
                         case 3 :
+                            out = newtranscaction.onlinePurchase(Bank.getCurrentUser(),accnum1,idfield.getText().trim(),amount);
+                            NotificationPanel.setText(out);
                             break;
                         case 4 :
                             out = newtranscaction.transfer(Bank.getCurrentUser(),Bank.getotheruser(other_usr),accnum1,accnum2,amount,idfield.getText().trim());
