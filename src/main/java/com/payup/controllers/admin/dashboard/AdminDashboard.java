@@ -2,12 +2,10 @@ package com.payup.controllers.admin.dashboard;
 
 import com.payup.models.Admin;
 import com.payup.models.Bank;
-import com.payup.models.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -51,6 +49,21 @@ public class AdminDashboard {
 
     @FXML
     TextField type;
+
+
+    //Add New Card TextFields
+    @FXML
+    TextField client_username;
+    @FXML
+    TextField client_password;
+    @FXML
+    TextField new_card_account_num;
+    @FXML
+    TextField new_card_password;
+    @FXML
+    TextField new_card_balance;
+    @FXML
+    TextField new_card_type;
 
 
     @FXML
@@ -110,7 +123,7 @@ public class AdminDashboard {
                         a.showAndWait();
                         AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/home_admin.fxml"));
                         fragementContainer.getChildren().setAll(lol);
-//                        Null Pointer Exception??
+//                      Null Pointer Exception when following line is uncommented
 //                        newClientLabel.setFont(Font.font(null,FontWeight.NORMAL,15));
                     }
                 }
@@ -148,12 +161,76 @@ public class AdminDashboard {
 
     @FXML
     void addNewCard(ActionEvent event){
+        String username = client_username.getText();
+        String clientPassword = client_password.getText();
+        String account_num = new_card_account_num.getText();
+        String password = new_card_password.getText();
+        String balance = new_card_balance.getText();
+        String type = new_card_type.getText();
 
+        try{
+            double b = Double.parseDouble(balance);
+            boolean duplicatePresent = checkAccountNumDuplicate(account_num);
+
+            if(b <= 0){
+                throw new Exception();
+            }
+
+            if(!duplicatePresent){
+                boolean userVerified = false;
+                int client_index = -1;
+                for(int i = 0; i < Bank.getClients().size(); i++){
+                    if(Bank.getClients().get(i).getUsername().equals(username) && Bank.getClients().get(i).getPassword().equals(clientPassword)){
+                        userVerified = true;
+                        client_index = i;
+                        break;
+                    }
+                }
+
+                if(userVerified){
+                    Bank.getClients().get(client_index).addAccount(account_num, b, password, type);
+                    AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/home_admin.fxml"));
+                    Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+                    a.setTitle("Success");
+                    a.setContentText("Card added Successfully");
+                    a.showAndWait();
+                    fragementContainer.getChildren().setAll(lol);
+                }else{
+                    Alert a = new Alert(Alert.AlertType.ERROR);
+                    a.setTitle("Error");
+                    a.setContentText("Please type a valid username and password");
+                    a.showAndWait();
+                }
+            }else{
+                Alert a = new Alert(Alert.AlertType.ERROR);
+                a.setTitle("Error");
+                a.setContentText("Please type a unique account number");
+                a.showAndWait();
+            }
+
+        }catch(Exception e){
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("Error");
+            a.setContentText("Please type a valid number in the balance field");
+            a.showAndWait();
+        }
+
+    }
+
+    boolean checkAccountNumDuplicate(String accountNum){
+        for(int i = 0; i < Bank.getClients().size(); i++){
+            for(int j = 0; j < Bank.getClients().get(i).getAccounts().size(); j++){
+                if(accountNum.equals(Bank.getClients().get(i).getAccounts().get(j).getAccountNumber())){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     @FXML
     void onprofileclickd(MouseEvent event) throws IOException {
-        AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/profile_page.fxml"));
+        AnchorPane lol = FXMLLoader.load(getClass().getResource("/layout/admin_profile_page.fxml"));
         fragementContainer.getChildren().setAll(lol);
     }
 }
