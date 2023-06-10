@@ -62,6 +62,10 @@ public class Transaction {
         if(a.getAccountNumber().equals(accountNumber) && a.getPassword().equals(password)) {
 
             if(a.getAccountNumber().equals(accountNumber) && a.getPassword().equals(password)) {
+                if(price<=0)
+                {
+                    return "Transaction Failed!";
+                }
            if (a.getBalance() >= price) {
                a.setBalance(a.getBalance() - price);
                c.getStatments().add("Made online purchase for " + price + "$.");

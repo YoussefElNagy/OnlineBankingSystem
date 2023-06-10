@@ -42,8 +42,6 @@ public class TransactionTest {
     public void test2Transfer() {
         String s = T.transfer(g,h,"1230","9000",100000000,"6004");
         assertEquals(42300,g.getAccounts().get(g.findAccount("1230")).getBalance(),0.0f);
-
-
     }
 
     @Test
@@ -57,6 +55,12 @@ public class TransactionTest {
         String s =T.onlinePurchase(b,"300","1988",100000);
         assertEquals(99999,b.getAccounts().get(b.findAccount("300")).getBalance(),0.0f);
     }
+    @Test
+    public void test3OnlinePurchase() {
+        String s =T.onlinePurchase(j,"4001","1092",-1000);
+        assertEquals(300000,j.getAccounts().get(j.findAccount("4001")).getBalance(),0.0f);
+    }
+
 
     @Test
     public void testPayBill(){
