@@ -33,9 +33,11 @@ public class TransactionTest {
 
     @Test
     public void transfer() {
+        double startTime = System.nanoTime();
         String s = T.transfer(e,f,"1177","1240",1000,"7700");
         assertEquals(38000,e.getAccounts().get(e.findAccount("1177")).getBalance(),0.0f);
-
+        double endTime = System.nanoTime();
+        System.out.println("Elapsed Time: " + (endTime - startTime));
     }
 
     @Test
@@ -46,8 +48,11 @@ public class TransactionTest {
 
     @Test
     public void testOnlinePurchase() {
+        double startTime = System.nanoTime();
         String s =T.onlinePurchase(j,"4001","1092",1000);
         assertEquals(299000,j.getAccounts().get(j.findAccount("4001")).getBalance(),0.0f);
+        double endTime = System.nanoTime();
+        System.out.println("Elapsed Time: " + (endTime - startTime));
     }
 
     @Test
@@ -64,8 +69,11 @@ public class TransactionTest {
 
     @Test
     public void testPayBill(){
+        double startTime = System.nanoTime();
         String s = T.payBill(c,"410", 20000,"9871");
         assertEquals(30505,c.getAccounts().get(c.findAccount("410")).getBalance(),0.0f);
+        double endTime = System.nanoTime();
+        System.out.println("Elapsed Time: " + (endTime - startTime));
     }
 
     @Test

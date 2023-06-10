@@ -26,15 +26,21 @@ public class ClientTest {
 
     @Test
     public void addAccount(){
+        double startTime = System.nanoTime();
         c.addAccount("ABCD4321", 500, "44444", "Saving");
         assertEquals(2,c.getAccountCount());
+        double endTime = System.nanoTime();
+        System.out.println("Elapsed Time: " + (endTime - startTime));
     }
 
     @Test
     public void testFindAccount()
     {
+        double startTime = System.nanoTime();
         int x = c.findAccount("ABCD1234");
         assertEquals(0,x);
+        double endTime = System.nanoTime();
+        System.out.println("Elapsed Time: " + (endTime - startTime));
     }
 
     @Test

@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        AccountTest.class, AdminTest.class,ClientTest.class, UserTest.class,BankTest.class
+        com.payup.test.AccountTest.class, com.payup.test.AdminTest.class, com.payup.test.ClientTest.class, com.payup.test.UserTest.class, com.payup.test.BankTest.class
 })
 public class Runner2 {
 }

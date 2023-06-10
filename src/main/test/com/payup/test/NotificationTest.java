@@ -57,9 +57,11 @@ public class NotificationTest {
 
         @Test
         public void transfer() {
+            double startTime = System.nanoTime();
             String s = T.transfer(e,f,"1177","1240",1000,"7700");
             assertTrue("Amount should be less than balance of first account",s.equals("Transaction Completed Successfully!"));
-
+            double endTime = System.nanoTime();
+            System.out.println("Elapsed Time: " + (endTime - startTime));
         }
 
         @Test
@@ -98,8 +100,11 @@ public class NotificationTest {
 
         @Test
         public void testOnlinePurchase() {
+            double startTime = System.nanoTime();
             String s =T.onlinePurchase(j,"4001","1092",1000);
             assertFalse("Not enough Balance", !(s.equals("Transaction Completed Successfully!")));
+            double endTime = System.nanoTime();
+            System.out.println("Elapsed Time: " + (endTime - startTime));
         }
 
         @Test
@@ -111,9 +116,11 @@ public class NotificationTest {
 
         @Test
         public void testPayBill(){
+            double startTime = System.nanoTime();
             String s = T.payBill(c,"410", 200,"9871");
             assertTrue("Insufficient Funds",s.equals("Bill Paid Successfully"));
-
+            double endTime = System.nanoTime();
+            System.out.println("Elapsed Time: " + (endTime - startTime));
         }
         @Test
         public void test2Paybill(){

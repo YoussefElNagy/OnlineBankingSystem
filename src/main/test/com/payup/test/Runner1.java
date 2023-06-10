@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        TransactionTest.class,NotificationTest.class
+        com.payup.test.TransactionTest.class, com.payup.test.NotificationTest.class
 })
 public class Runner1 {
 

@@ -160,7 +160,7 @@ public class AdminDashboard {
     }
 
     @FXML
-    void addNewCard(ActionEvent event){
+    void addNewCard(ActionEvent event) throws IOException {
         String username = client_username.getText();
         String clientPassword = client_password.getText();
         String account_num = new_card_account_num.getText();
@@ -173,7 +173,7 @@ public class AdminDashboard {
             boolean duplicatePresent = checkAccountNumDuplicate(account_num);
 
             if(b <= 0){
-                throw new Exception();
+                throw new NumberFormatException();
             }
 
             if(!duplicatePresent){
@@ -194,6 +194,8 @@ public class AdminDashboard {
                     a.setTitle("Success");
                     a.setContentText("Card added Successfully");
                     a.showAndWait();
+//                    Null Pointer Exception when following line is uncommented
+//                        newCardLabel.setFont(Font.font(null,FontWeight.NORMAL,15));
                     fragementContainer.getChildren().setAll(lol);
                 }else{
                     Alert a = new Alert(Alert.AlertType.ERROR);
@@ -208,7 +210,7 @@ public class AdminDashboard {
                 a.showAndWait();
             }
 
-        }catch(Exception e){
+        }catch(NumberFormatException e){
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("Error");
             a.setContentText("Please type a valid number in the balance field");

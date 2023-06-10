@@ -7,7 +7,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-       Runner1.class,Runner2.class
+       com.payup.test.Runner1.class, com.payup.test.Runner2.class
 })
 public class Runners {
 

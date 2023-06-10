@@ -35,8 +35,10 @@ public class BankTest {
 
 @Test
     public void check_user_cred(){
+        double startTime = System.nanoTime();
         assertTrue("Wrong password or username",a.check_user_cred("$$$$$","5672"));
-
+        double endTime = System.nanoTime();
+        System.out.println("Elapsed Time: " + (endTime - startTime));
     }
 
     @Test
